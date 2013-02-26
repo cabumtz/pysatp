@@ -1,0 +1,35 @@
+{% extends "level1Template.html" %}
+
+
+{% block head %}
+	<script type="text/javascript" src="{{ STATIC_URL }}js/jquery_jquery_ui/jquery-1.9.0.js"></script>
+	<script type="text/javascript" src="{{ STATIC_URL }}js/jquery_jquery_ui/jquery-ui-1.10.0.min.js"></script>
+
+	<script type="text/javascript" src="{{ STATIC_URL }}js/main.js"></script>
+	
+	<script type="text/javascript">
+		/*
+		$(function() {
+			alert('Hola a todos 2');
+			createMenu();
+		});*/
+	</script>
+{% endblock %}
+
+
+
+{% block left %}
+	<ul id="menu" >
+		<li>
+			<a href="#">Entidades</a>
+			<ul>
+				<li><a href="#">Administradores</a></li>
+				<li><a href="#">Concecionarios</a></li>
+				<li><a href="#">Choferes</a></li>
+				<li><a href="#">Unidades de Transporte</a></li>
+			</ul>
+		</li>
+		<li><a href="#">Evaluación</a></li>
+		<li><a href="#">Reportes</a></li>
+	</ul>
+{% endblock %}

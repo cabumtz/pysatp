@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="es">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+	<link href="{{ STATIC_URL }}css/sunny/jquery-ui-1.10.0.sunny.min.css"
+		rel="stylesheet" type="text/css" />
+
+	<link href="{{ STATIC_URL }}css/default.css"
+		rel="stylesheet" type="text/css" />
+		
+	<link href="{{ STATIC_URL }}css/cssLayout.css"
+		rel="stylesheet" type="text/css" />
+	
+	{% block head %}
+	<!-- head -->
+	{% endblock %}
+
+		<!--
+		<link href="/themes/#{confController.themeName}/skin.css" type="text/css" />
+		-->
+	<title>SATP System</title>
+</head>
+
+<body>
+
+	<div id="top">
+	
+		{% block top %}
+		<!-- top -->
+		{% endblock %}
+		
+		<!--
+		<p:menubar>
+			<p:submenu label="Administrar Entidades">
+				<p:menuitem value="Usuarios" url="#" />
+				<p:menuitem value="Choferes" url="/vista/pages/chofer/listaChoferes.xhtml" />
+				<p:menuitem value="Concecionarios" url="#" />
+				<p:menuitem value="Administradores" url="#" />
+				<p:menuitem value="Unidades de Transporte" url="#" />
+			</p:submenu>
+			<p:submenu label="Evaluación">
+				<p:menuitem value="Califica Chofer" url="#" />
+				<p:menuitem value="Califica Concecionario" url="#" />
+				<p:menuitem value="Califica Administrador" url="#" />
+				<p:menuitem value="Califica Unidad de Transporte" url="#" />
+			</p:submenu>
+			<p:submenu label="Reportes">
+				<p:menuitem value="Licencias" url="#" />
+				<p:menuitem value="Unidades" url="#" />
+				<p:menuitem value="Choferes" url="#" />
+			</p:submenu>
+		</p:menubar>
+		-->
+	</div>
+
+	<div>
+		<div id="left">
+			{% block left %}
+			<!-- left -->
+			{% endblock %}
+		</div>
+		<div>
+			<div id="right">
+				{% block right %}
+				<!-- right -->
+				{% endblock %}
+					
+			</div>
+			
+			<div id="content" class="right_content">
+				{% block content %}
+				<!-- content -->
+				{% endblock %}
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="bottom">
+		{% block bottom %}
+		<!-- bottom -->
+		{% endblock %}
+	</div>
+
+</body>
+
+</html>
