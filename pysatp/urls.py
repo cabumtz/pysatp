@@ -16,7 +16,14 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
 
     #url(r'^satp/choferes/', 'transpu.views'),
-    url(r'^satp/$', 'transpu.views.index'),
 
-    
+
+
+    url(r'^satp/$', 'transpu.views.index'),
+	url(r'^satp/index\.html$', 'transpu.views.index'),
+
+	url(r'^satp/entidades\.html$', 'transpu.views.entidades'),
+	url(r'^satp/evaluacion\.html$', 'transpu.views.evaluacion'),
+	url(r'^satp/reportes\.html$', 'transpu.views.reportes'),
+
 )

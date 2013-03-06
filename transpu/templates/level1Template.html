@@ -4,19 +4,66 @@
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-
-	<link href="{{ STATIC_URL }}css/sunny/jquery-ui-1.10.0.sunny.min.css"
-		rel="stylesheet" type="text/css" />
-
-	<link href="{{ STATIC_URL }}css/default.css"
-		rel="stylesheet" type="text/css" />
-		
-	<link href="{{ STATIC_URL }}css/cssLayout.css"
-		rel="stylesheet" type="text/css" />
 	
-	{% block head %}
-	<!-- head -->
+	{% block head1 %}
+		<!-- head1 -->
+		<link href="{{ STATIC_URL }}css/normalize.css"
+			rel="stylesheet" type="text/css" />
+
+		<link href="{{ STATIC_URL }}css/sunny/jquery-ui-1.10.0.sunny.min.css"
+			rel="stylesheet" type="text/css" />
 	{% endblock %}
+
+	{% block head2 %}
+		<!-- head2 -->
+		<!--<link href="{{ STATIC_URL }}css/cssLayout.css"
+			rel="stylesheet" type="text/css" />
+-->
+		<link href="{{ STATIC_URL }}css/default.css"
+			rel="stylesheet" type="text/css" />
+	{% endblock %}
+
+	{% block head3 %}
+		<!-- head3 -->
+		<link type="text/css" href="{{ STATIC_URL }}css/assets/bootstrap.min.css" rel="stylesheet">
+		<!--
+		<link type="text/css" href="{{ STATIC_URL }}css/custom-theme/jquery-ui-1.10.0.custom.css" rel="stylesheet" />
+	-->
+		<link type="text/css" href="{{ STATIC_URL }}css/assets/font-awesome.min.css" rel="stylesheet" />
+		<!--[if IE 7]>
+		<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/assets/font-awesome-ie7.min.css">
+		<![endif]-->
+		<!--[if lt IE 9]>
+		<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/custom-theme/jquery.ui.1.10.0.ie.css"/>
+		<![endif]-->
+		<link href="{{ STATIC_URL }}css/assets/docs.css" rel="stylesheet">
+		<link href="{{ STATIC_URL }}js/assets/google-code-prettify/prettify.css" rel="stylesheet">
+	{% endblock %}
+
+	{% block head4 %}
+		<!-- head4 -->
+	{% endblock %}
+
+	{% block head5 %}
+		<!-- head5 -->
+	{% endblock %}
+
+	{% block head6 %}
+		<!-- head6 -->
+	{% endblock %}
+
+	{% block head7 %}
+		<!-- head7 -->
+	{% endblock %}
+
+	{% block head8 %}
+		<!-- head8 -->
+	{% endblock %}
+
+	{% block head9 %}
+		<!-- head9 -->
+	{% endblock %}
+
 
 		<!--
 		<link href="/themes/#{confController.themeName}/skin.css" type="text/css" />
@@ -56,25 +103,25 @@
 		-->
 	</div>
 
-	<div>
-		<div id="left">
+	<div class="container">
+		<div id="left" class="span3 bs-docs-sidebar">
 			{% block left %}
 			<!-- left -->
 			{% endblock %}
 		</div>
-		<div>
-			<div id="right">
+		<div class="span9">
+			<section id="right">
 				{% block right %}
 				<!-- right -->
 				{% endblock %}
 					
-			</div>
+			</section>
 			
-			<div id="content" class="right_content">
+			<section id="content" class="right_content">
 				{% block content %}
 				<!-- content -->
 				{% endblock %}
-			</div>
+			</section>
 
 			
 		</div>

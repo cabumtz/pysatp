@@ -1,20 +1,4 @@
-{% extends "level1Template.html" %}
-
-
-{% block head4 %}
-	<script type="text/javascript" src="{{ STATIC_URL }}js/jquery_jquery_ui/jquery-1.9.0.js"></script>
-	<script type="text/javascript" src="{{ STATIC_URL }}js/jquery_jquery_ui/jquery-ui-1.10.0.min.js"></script>
-
-	<script type="text/javascript" src="{{ STATIC_URL }}js/main.js"></script>
-	
-	<script type="text/javascript">
-		/*
-		$(function() {
-			alert('Hola a todos 2');
-			createMenu();
-		});*/
-	</script>
-{% endblock %}
+{% extends mainTemplate.html %}
 
 
 {% block top %}
@@ -28,20 +12,20 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="brand" href="#">SATP</a>
+				<a class="brand" href="http://github.com/addyosmani/jquery-ui-bootstrap">jQuery UI Bootstrap</a>
 				<div class="nav-collapse collapse">
 					<ul class="nav">
-						<li class="{{ topMenu.home.class }}">
+						<li class="active">
 							<a href="./index.html">Home</a>
 						</li>
-						<li class="{{ topMenu.entidades.class }}">
-							<a href="./entidades.html">Entidades</a>
+						<li>
+							<a href="./extra.html">Extra</a>
 						</li>
 						<li>
-							<a href="./evaluacion.html">Evaluaci&oacute;n</a>
+							<a href="http://github.com/addyosmani/jquery-ui-bootstrap/issues">Feedback/Issues</a>
 						</li>
 						<li>
-							<a href="./reportes.html">Reportes</a>
+							<a href="http://twitter.com/addyosmani">Contact</a>
 						</li>
 					</ul>
 					<div id="twitter-share" class="pull-right">
@@ -59,20 +43,7 @@
 {% endblock %}
 
 
-{% block left %}
-	<!--
-	<ul id="menu" >
-		<li>
-			<a href="#">Entidades</a>
-			<ul>
-				<li><a href="#">Administradores</a></li>
-				<li><a href="#">Concecionarios</a></li>
-				<li><a href="#">Choferes</a></li>
-				<li><a href="#">Unidades de Transporte</a></li>
-			</ul>
-		</li>
-		<li><a href="#">Evaluación</a></li>
-		<li><a href="#">Reportes</a></li>
-	</ul>
-	-->
+{% block content %}
+
+
 {% endblock %}
