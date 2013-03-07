@@ -73,65 +73,113 @@
 
 <body>
 
-	<div id="top">
-	
-		{% block top %}
-		<!-- top -->
-		{% endblock %}
-		
-		<!--
-		<p:menubar>
-			<p:submenu label="Administrar Entidades">
-				<p:menuitem value="Usuarios" url="#" />
-				<p:menuitem value="Choferes" url="/vista/pages/chofer/listaChoferes.xhtml" />
-				<p:menuitem value="Concecionarios" url="#" />
-				<p:menuitem value="Administradores" url="#" />
-				<p:menuitem value="Unidades de Transporte" url="#" />
-			</p:submenu>
-			<p:submenu label="Evaluación">
-				<p:menuitem value="Califica Chofer" url="#" />
-				<p:menuitem value="Califica Concecionario" url="#" />
-				<p:menuitem value="Califica Administrador" url="#" />
-				<p:menuitem value="Califica Unidad de Transporte" url="#" />
-			</p:submenu>
-			<p:submenu label="Reportes">
-				<p:menuitem value="Licencias" url="#" />
-				<p:menuitem value="Unidades" url="#" />
-				<p:menuitem value="Choferes" url="#" />
-			</p:submenu>
-		</p:menubar>
-		-->
+	<div class="navbar navbar-inverse navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+			{% block top %}
+			<!--
+			<p:menubar>
+				<p:submenu label="Administrar Entidades">
+					<p:menuitem value="Usuarios" url="#" />
+					<p:menuitem value="Choferes" url="/vista/pages/chofer/listaChoferes.xhtml" />
+					<p:menuitem value="Concecionarios" url="#" />
+					<p:menuitem value="Administradores" url="#" />
+					<p:menuitem value="Unidades de Transporte" url="#" />
+				</p:submenu>
+				<p:submenu label="Evaluación">
+					<p:menuitem value="Califica Chofer" url="#" />
+					<p:menuitem value="Califica Concecionario" url="#" />
+					<p:menuitem value="Califica Administrador" url="#" />
+					<p:menuitem value="Califica Unidad de Transporte" url="#" />
+				</p:submenu>
+				<p:submenu label="Reportes">
+					<p:menuitem value="Licencias" url="#" />
+					<p:menuitem value="Unidades" url="#" />
+					<p:menuitem value="Choferes" url="#" />
+				</p:submenu>
+			</p:menubar>
+			-->
+			{% endblock %}
+			</div>
+		</div>
 	</div>
+	
+	<!--
+	<header id="overview" class="jumbotron subhead">
+
+	</header>-->
+
+	
 
 	<div class="container">
-		<div id="left" class="span3 bs-docs-sidebar">
-			{% block left %}
-			<!-- left -->
-			{% endblock %}
-		</div>
-		<div class="span9">
-			<section id="right">
-				{% block right %}
-				<!-- right -->
-				{% endblock %}
-					
-			</section>
-			
-			<section id="content" class="right_content">
-				{% block content %}
-				<!-- content -->
-				{% endblock %}
-			</section>
+		<div class="row">
 
-			
+			<div class="span3 bs-docs-sidebar">
+				{% block left %}
+				<!-- left -->
+				{% endblock %}
+			</div>
+
+			<div class="span9">
+				<section id="right" class="pull-right">
+					{% block right %}
+					<!-- right -->
+					{% endblock %}
+				</section>
+				
+				<section id="content1" class="right_content">
+					{% block content %}
+					<!-- content -->
+					{% endblock %}
+				</section>
+
+				<section id="content2" class="right_content">
+					{% block content2 %}
+					<!-- content -->
+					{% endblock %}
+				</section>
+			</div>
+
 		</div>
 	</div>
 
-	<div id="bottom">
-		{% block bottom %}
-		<!-- bottom -->
-		{% endblock %}
-	</div>
+	<!-- Footer
+	================================================== -->
+	<footer class="footer pull-bottom">
+		<div class="container">
+			<div class="row">
+				{% block bottom %}
+					<!-- bottom -->
+					<!--
+					<div class="span3">
+						<h3><span class="icon-envelope"></span> Contact</h3>
+						<ul class="icons">
+							<li><i class="icon-link"></i> Blog: <a class="targetblank" href="http://addyosmani.com/blog/">Addy Osmani</a></li>
+							<li><i class="icon-twitter"></i> Twitter: <a class="targetblank" href="https://twitter.com/addyosmani">@addyosmani</a></li>
+							<li><i class="icon-github"></i> Github: <a class="targetblank" href="https://github.com/addyosmani/jquery-ui-bootstrap/issues?state=open">Issues</a></li>
+						</ul>
+					</div>
+					<div class="span9">
+						<div class="span4">
+							<h3><span class="icon-group"></span> Team</h3>
+							<ul class="unstyled">
+								<li>Lead Product Developer : <a class="targetblank" href="http://addyosmani.com/blog/" hreflang="en">Addy Osmani</a></li>
+								<li>Co-maintainer : <a class="targetblank" href="http://blog.aurelien-gerits.be" hreflang="fr">Aurélien Gérits</a></li>
+							</ul>
+						</div>
+						<div class="span4">
+							<h3><span class="icon-lightbulb"></span> Credits</h3>
+							<ul class="unstyled">
+								<li>jQuery UI Bootstrap &copy; <strong class="text-info">Addy Osmani</strong> 2012 - 2013.</li>
+								<li>Twitter Bootstrap &copy; <strong class="text-info">Twitter</strong> 2012 - 2013</li>
+							</ul>
+						</div>
+					</div>
+					-->
+				{% endblock %}
+			</div>
+		</div>
+	</footer>
 
 </body>
 
