@@ -1,3 +1,6 @@
+#project specific
+*.db
+
 #python specific
 *.pyc
 
