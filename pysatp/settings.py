@@ -135,12 +135,39 @@ INSTALLED_APPS = (
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
+
+    'formatters': {
+        'verbose': {
+            'format': '%(levelname)s %(asctime)s %(module)s %(process)d %(thread)d %(message)s'
+        },
+        'simple': {
+            'format': '%(levelname)s %(message)s'
+        },
+        'generic': {
+            'format': '%(asctime)s,%(msecs)03d %(levelname)-5.5s [%(name)s] %(message)s'
+        }
+    },
     'filters': {
         'require_debug_false': {
             '()': 'django.utils.log.RequireDebugFalse'
         }
     },
     'handlers': {
+        'null': {
+            'level': 'DEBUG',
+            'class': 'django.utils.log.NullHandler',
+        },
+        'file': {
+            'class' : 'logging.handlers.TimedRotatingFileHandler',
+            #'args' : ['logs/pysatp.log', 'D'],
+            'level' : 'DEBUG',
+            'formatter' : 'generic'
+        },
+        'console':{
+            'level': 'DEBUG',
+            'class': 'logging.StreamHandler',
+            'formatter': 'simple'
+        },
         'mail_admins': {
             'level': 'ERROR',
             'filters': ['require_debug_false'],
@@ -153,5 +180,23 @@ LOGGING = {
             'level': 'ERROR',
             'propagate': True,
         },
+
+        'transpu': {
+            'handlers': ['console'],
+            'level' : 'DEBUG'
+
+        },
+
     }
 }
+
+
+EMAIL_HOST_USER='cabumtz@gmail.com'
+
+EMAIL_HOST_PASSWORD='./malditoelhombre3'
+
+EMAIL_HOST='smtp.googlemail.com'
+
+EMAIL_PORT='465'
+
+EMAIL_USE_TLS=True

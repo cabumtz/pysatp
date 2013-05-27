@@ -15,15 +15,13 @@ urlpatterns = patterns('',
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
 
-    #url(r'^satp/choferes/', 'transpu.views'),
-
-
+    # url(r'^satp/choferes/', 'transpu.views'),
 
     url(r'^satp/$', 'transpu.views.index'),
-	url(r'^satp/index\.html$', 'transpu.views.index'),
+    url(r'^satp/index\.html$', 'transpu.views.index'),
 
-	url(r'^satp/entidades\.html$', 'transpu.views.entidades'),
-	url(r'^satp/evaluacion\.html$', 'transpu.views.evaluacion'),
-	url(r'^satp/reportes\.html$', 'transpu.views.reportes'),
-
+    url(r'^satp/entidades\.html$', 'transpu.views.entidades'),
+    url(r'^satp/evaluacion\.html$', 'transpu.views.evaluacion'),
+    url(r'^satp/reportes\.html$', 'transpu.views.reportes'),
+    url(r'^satp/job1\.html$', 'transpu.views.job1Test'),
 )
